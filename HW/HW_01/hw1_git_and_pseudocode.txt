@@ -1,0 +1,129 @@
+Homework 1 - Git & GitHub and Pseudocode
+DUE: Thursday, September 23, 2021, at 10am
+
+================================================
+PROBLEM 1: (20 points) git & GitHub
+
+PART A (5 points) - no need to include anything in the solution file for this:
+On the repository:
+https://github.com/mitreacristina/homework1_bioinf575 (Links to an external site.)
+
+You will be collaborating on updating a DNA sequence file (DNA_sequence.txt) that should contain the following 4 lines repeated as many times as needed for each student in the class to add a line:
+AAAA
+CCCC
+GGGG
+TTTT 
+ 
+a. (1 point) Send me (in a slack private message or e-mail) your github username so I can allow you to edit the file on the homework1_bioinf575 repository.  
+b. (4 points) Once you receive the confirmation that you have been allowed to edit the file, add the next sequence line to the file (only one line) without removing any of the lines added by your colleagues.
+
+For example, the first student that edits the file will add a line with AAAA, the next student will add a line with CCCC, and so on, ...., the fifth student will add a line with AAAA, and so on, until all students added a line to the file.
+If you deleted somebody's line in the process work with them to fix the issue (make the edits necessary in the correct order).
+YOU CAN WORK TOGETHER TO DEVISE A STRATEGY TO AVOID CONFLICTS.
+
+PART B (15 points): You will be using the GitHub repository that you created and cloned to your computer during class in the. last couple of class sessions. This is the demo/test/testing repository we created in class. If you do not have that repository anymore (or you did not get a chance to make it), please login to GitHub, create a "demo" repository (make sure you check the boxes to have a README file, a .gitignore for Python and a license), and clone this repository to your computer.
+
+a. (0.5 points) Change the README.md file online to contain the following 4 lines (the lines between --- including empty lines) and then commit that change to the main branch online:
+---
+Repo for testing
+
+We will work with this repo for the BIOINF 575 class
+
+---
+
+From here on keep track in the solution file of ALL the commands you used to solved each step AS WELL AS THE OPUTPUT you see at the console after each command.
+
+b. (0.5 points) Navigate to the local copy of your demo repository relative to your home directory 
+cd ~/<path_to_demo_repo>
+c. (0.5 points) Check the current directory path.
+d. (0.5 points) Check the repository status
+e. (0.5 points) Bring the changes you did online to the local repository
+f. (0.5 points) Use the cat command to look at the content of the README.md
+g. (0.5 points) ADD/APPEND the following text to the end of README.md in the repository using the echo command: 
+"This line is for Problem1Bg."
+h. (0.5 points) Use git diff to see the change to README.md
+i. (0.5 points) Stage/add the changed file to be tracked
+j. (0.5 points) Commit the change with the following commit message:
+"Added a line in README.md for Problem1Bj"
+k. (0.5 points) To make a "bad" change to the repository, add the following line to the end of README.md (you can use the echo command or an editor, e.g. nano, TextEdit, notepad):
+"This line is added by mistake for Problem1Bk."
+l. (0.5 points) Use the cat command to show the content of the README.md file 
+m. (0.5 points) Stage the changed file to be tracked
+n. (0.5 points) Commit the change with the following commit message:
+"Added a line by mistake in README.md for Problem1Bn"
+o. (1.5 points) To restore the file to the "correct" version, first check the log of the repository and find the commit identifier of step j - mark the commit identifier with ** in the output that you include in your solution
+(hint: Use --oneline to aide in log readability)
+You can do this by listing all the log and looking for the commit message by visual inspection or by using a pipe (|) and grep
+p. (1.5 point) Use the commit identifier and filename (README.md) in the command: 
+git checkout <commitid> <filename> 
+to revert to the previous version of README.md from step j
+q. (0.5 points) Check the status of the repository
+Write in your solution file the status of README.md (changed/unchanged, staged/not staged)
+Use git diff or git status and write in the solution file what is the change and how it is marked
+r. (0.5 points) Make the local version of the README.md available on the remote repository (stage the change if it is not staged, commit the change if it is not committed, push the changes). 
+Refresh the webpage for your remote repository and see the change.
+s. (0.25 points) Change the second line in your README.md on your local computer to:
+"Creating conflict"
+t. (0.25 points) Change the second line in your README.md on your remote repository (on the GitHub website):
+"This is the conflicting line"
+u. (0.5 points) On the local repository stage/add the change you did at point s and commit it with the message:
+"Changed README.md"
+v. (0.25 points) Pull the changes from the remote repository 
+You should get something like:
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+x. (0.25 points) 
+- Open the file with an editor
+You will have something like this in the file:
+<<<<<<< HEAD
+Creating a conflict
+=======
+This is the conflicting line
+>>>>>>> f4d622a90c9d36bd7e9c1f5b6dcf3c336a437b0d
+
+- Remove the lines with <<, ==, >> in the editor and save the file.
+- Stage and commit the file with the message: 
+"Conflict solved"
+y. (1.25 points) 
+- Add a line to the end of the README.md (you can use an editor):
+"Testing stash"
+- Use cat to show the content of the file.
+- Stash your changes (save them for later) using: 
+git stash
+That will save your changes and take the repository in the state it was at the last commit
+- Display the content of the README.md file using cat
+- Check the stash list with:
+git stash list
+z. (1.25 points) 
+- Bring the changes in your stash back using the command below. The @{0} tells us to bring the changes in the latest stash, stashes are stored as a stack latest on top (index 0). NOTE: There is a dot at the end of the command that means bring the changes in to the current directory.
+git checkout stash@{0} .
+- Display the content of the README.md file using cat
+
+==========================================================
+ 
+
+PROBLEM 2: (10 points) Pseudocode
+GC-content is the percentage of nitrogenous bases on a DNA molecule that are either guanine (G) or cytosine (C). GC-rich DNA sequences are more stable than sequences with low GC-content.  This means that the higher the GC content, the higher the melting point of the DNA.
+
+Considering this, we want to calculate the GC-content of a given DNA sequence to derive hypotheses regarding how stable it is.
+
+Write pseudocode to calculate the number of A,C,G and T bases in the sequence and the CG content of a given sequence seq, considering the following steps (2 points for each step):
+
+Identify and initialize parameters
+Loop/iterate through the sequence
+Count the number of A, C, G and T bases
+Calculate the percentage of GC (that is, GC-content)
+Display the result
+
+Example:
+Given the sequence: "CCGTAAGTTTAAACGCGTAAGCTTT", the result would be:
+7 As
+5 Cs
+5 Gs
+8 Ts
+GC% = 10/25 = 0.4 = 40% 
+
+ 
+
+=====================================================================
+

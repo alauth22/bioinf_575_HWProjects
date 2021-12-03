@@ -1,0 +1,374 @@
+Homework 1 - Git & GitHub and Pseudocode
+DUE: Thursday, September 23, 2021, at 10am
+
+================================================
+PROBLEM 1: (20 points) git & GitHub-->DONE!
+
+PART A (5 points): DONE! 
+
+PART B (15 points): 
+
+a. (0.5 points): 
+#DONE on remote repository: added the required lines and committed to the main branch online. 
+
+
+b. (0.5 points):
+$ cd Documents/
+$ ls
+'My Music'@  'My Pictures'@  'My Videos'@   bioinf575/   hg541/
+$ cd bioinf575/
+$ ls
+ BRCA1_sequence.fa    Exercises/   README.md          test_env.ipynb
+ CODE_OF_CONDUCT.md   HW/         'Study sessions'/   test_env_2.ipynb
+'Class Sessions'/     LICENSE      images/            test_script_2.sh
+$ cd "Class Sessions"/
+$ ls
+'Bash intro-Session 2'/
+'Session 3_Bash_commands_applied'/
+ Session_4_Git_GitHub/
+ Session_5_Programming_concepts_python/
+ Session_6_Data_Types_strings_lists_tuples_basic_debugging/
+$ cd Session_4_Git_GitHub/
+$ ls
+BRCA1_sequence.fa  Git_and_GitHub.pdf    example_script.sh*  test_repo/
+BRCA2_sequence.fa  bash_git_commands.sh  results.txt         testing/
+$ cd testing/
+
+
+c. (0.5 points):
+$ pwd
+/c/Users/alauth/Documents/bioinf575/Class Sessions/Session_4_Git_GitHub/testing
+
+
+d. (0.5 points):
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+
+e. (0.5 points):
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 700 bytes | 70.00 KiB/s, done.
+From https://github.com/alauth22/testing
+   e53cdef..e4e8e55  main       -> origin/main
+Updating e53cdef..e4e8e55
+Fast-forward
+ README.md | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+
+f. (0.5 points):
+$ cat README.md
+
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+
+
+g. (0.5 points):
+$ echo "This line is for Problem1Bg." >> README.md
+$ cat README.md
+
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+This line is for Problem1Bg.
+
+
+h. (0.5 points):
+$ git diff
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+diff --git a/README.md b/README.md
+index 57e5c0a..55ea8d0 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,4 @@
+
+ Repo for testing
+ We will work with this repo for the BIOINF 575 class
++This line is for Problem1Bg.
+
+
+i. (0.5 points):
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+j. (0.5 points):
+$ git commit -m "Added a line in README.md for Problem1Bj."
+[main 0fa43f3] Added a line in README.md for Problem1Bj.
+ 1 file changed, 1 insertion(+)
+
+
+k. (0.5 points):
+$ echo "This line is added by mistake for Problem1Bk." >> README.md
+
+
+l. (0.5 points):
+$ cat README.md
+
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+This line is for Problem1Bg.
+This line is added by mistake for Problem1Bk.
+
+
+m. (0.5 points):
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+n. (0.5 points):
+$ git commit -m "Added a line by mistake in README.md for Problem1Bn."
+[main 99d17f7] Added a line by mistake in README.md for Problem1Bn.
+ 1 file changed, 1 insertion(+)
+
+
+o. (1.5 points):
+$ git log --oneline
+99d17f7 (HEAD -> main) Added a line by mistake in README.md for Problem1Bn.
+**Added a line in README.md for Problem1Bj.
+e4e8e55 (origin/main, origin/HEAD) Update README.md
+e53cdef For step letter r in HW1
+790d72e Added a line by mistake in README.md for Problem1Bn
+406381f Added a line by mistake in README.md for Problem1Bj
+7324129 Update README.md
+1f6bed1 (new_feature) Added new_file.txt
+3f1936b Update README.md
+14465a0 Merge pull request #1 from alauth22/changed_title
+d3b4db8 Update README.md
+d08df04 Update README.md
+de3bb7f Initial commit
+
+
+p. (1.5 point):
+$ git checkout 0fa43f3 README.md
+Updated 1 path from 43e77e4
+
+
+q. (0.5 points):
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+#Changed and not staged. 
+#The change is removing the "bad change" that was appended to the README.md file in step k.
+The README.md file should now contain what it originally had at step j. We know the change 
+is marked because the README.md file is highlighted in green from git status. 
+
+
+r. (0.25 points):
+$ git commit -m "Committing changes for Problem1Br."
+[main 63fad3d] Committing changes for Problem1Br.
+ 1 file changed, 1 deletion(-)
+ 
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 818 bytes | 818.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/alauth22/testing.git
+   e4e8e55..63fad3d  main -> main
+
+
+s. (0.25 points):
+#opened text editor, changed second line of README.md file to "Creating conflict", and saved it. 
+Creating conflict
+Repo for testing 
+We will work with this repo for the BIOINF 575 class
+This line is for Problem1Bg.
+
+#On termianl I checked with cat command. 
+$ cat README.md
+
+Creating conflict
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+This line is for Problem1Bg.
+
+
+t. (0.25 points):
+#Went to my GitHub account, edited the second line of the README.md file with "This is the conflicting line",
+and I committed the chagne on the remote respository. 
+
+
+u. (0.5 points):
+$ git add README.md
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+$ git commit -m "Changed README.md"
+[main 45221f7] Changed README.md
+ 1 file changed, 1 insertion(+)
+
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+
+v. (0.25 points): 
+$ git pull
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result. 
+
+
+x. (0.25 points):
+#opened the README.md in text editor and received same message as shown in 
+hw_1.txt. I removed the lines with <<, ==, and >> in the editor and saved the file. 
+$ git add README.md
+
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   README.md
+
+$ git commit -m "Conflict solved"
+[main 8fe4491] Conflict solved
+
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+y. (1.25 points):
+#added the line "Testing stash" to the end of the README.md in the editor.
+$ cat README.md
+
+
+Creating conflict
+
+This is the conflicting line.
+
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+This line is for Problem1Bg.
+Testing stash
+
+$ git stash
+Saved working directory and index state WIP on main: 8fe4491 Conflict solved
+
+$ cat README.md
+
+
+Creating conflict
+
+This is the conflicting line.
+
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+This line is for Problem1Bg.
+
+$ git stash list
+stash@{0}: WIP on main: 8fe4491 Conflict solved
+
+
+z. (1.25 points):
+$ git checkout stash@{0} .
+Updated 1 path from 7070bb5
+
+$ cat README.md
+
+
+Creating conflict
+
+This is the conflicting line.
+
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+This line is for Problem1Bg.
+Testing stash
+
+==========================================================
+ 
+
+PROBLEM 2: (10 points) Pseudocode:
+
+1. Set Input Parameters
+   a. LET LIST = DNA_sequence 
+   b. LET count_A = 0 
+   c. LET count_C = 0
+   d. LET count_G = 0 
+   e. LET count_T = 0
+   f. LET Index = 1 
+   g. LET nucleotide_position = LIST[Index]
+   h. LET nucleotide_average = ((count_G + count_C)/(count_G + count_C + count_A + count_T))
+   i  LET nucleotide_percantage = ((count_G + count_C)/(count_G + count_C + count_A + count_T))*100
+   j. LET nucleotide_total = (count_G + count_C + count_A + count_T)
+
+2. Repeat 
+   a. If nucleotide_position == "A"
+   	Return count_A + 1
+      	Else 
+      If nucleotide_position == "C"
+	Return count_C + 1
+ 	Else 
+      If nucleotide_position == "G"
+	Return count_G + 1
+	Else 
+      If nucleotide_position == "T"
+	Return count_T + 1
+	Else 
+      Go through the loop until last nucleotide in LIST has been through the loop. 
+      Index = Index + 1
+      Until Index > length(LIST) 
+
+3. Display 
+   a. count_A + "As"
+   b. count_C + "Cs"
+   c. count_G + "Gs"
+   d. count_T + "Ts"
+
+   Print "GC% = " + (count_G + count_C) + "/" + nucelotide_total + "=" + nucleotide_average + "=" + nucleotide_percentage + "%"
+=====================================================================
+

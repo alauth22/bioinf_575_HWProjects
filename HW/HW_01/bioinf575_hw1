@@ -1,0 +1,281 @@
+bioinf575_hw1
+part_1_a -DONE
+part_1_b 
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_5_Programming_concepts_python (main)
+$ pwd
+/c/Users/alauth/Documents/bioinf575/Class Sessions/Session_5_Programming_concepts_python
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_5_Programming_concepts_python (main)
+$ ls
+Intro_to_Python.pdf       variables_numeric_bool.ipynb
+Programming_concepts.pdf
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_5_Programming_concepts_python (main)
+$ cd ..
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ ls
+'Bash intro-Session 2'/
+'Session 3_Bash_commands_applied'/
+ Session_4_Git_GitHub/
+ Session_5_Programming_concepts_python/
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ ls
+'Bash intro-Session 2'/
+'Session 3_Bash_commands_applied'/
+ Session_4_Git_GitHub/
+ Session_5_Programming_concepts_python/
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ cd "Session_5_Prgramming_concepts_python/
+> ^C
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ cd "Session_5_Prgramming_concepts_python/"
+bash: cd: Session_5_Prgramming_concepts_python/: No such file or directory
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ ls
+'Bash intro-Session 2'/
+'Session 3_Bash_commands_applied'/
+ Session_4_Git_GitHub/
+ Session_5_Programming_concepts_python/
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ cd Session_5_Programming_concepts_python
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_5_Programming_concepts_python (main)
+$ ls
+Intro_to_Python.pdf       variables_numeric_bool.ipynb
+Programming_concepts.pdf
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_5_Programming_concepts_python (main)
+$ cd ..
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ ls
+'Bash intro-Session 2'/
+'Session 3_Bash_commands_applied'/
+ Session_4_Git_GitHub/
+ Session_5_Programming_concepts_python/
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ cd ..
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575 (main)
+$ pwd
+/c/Users/alauth/Documents/bioinf575
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575 (main)
+$ ls
+ BRCA1_sequence.fa    HW/                images/
+ CODE_OF_CONDUCT.md   LICENSE            test_env.ipynb
+'Class Sessions'/     README.md          test_env_2.ipynb
+ Exercises/          'Study sessions'/   test_script_2.sh
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575 (main)
+$ cd ""Class Sessions"
+> ^C
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575 (main)
+$ ls
+ BRCA1_sequence.fa    HW/                images/
+ CODE_OF_CONDUCT.md   LICENSE            test_env.ipynb
+'Class Sessions'/     README.md          test_env_2.ipynb
+ Exercises/          'Study sessions'/   test_script_2.sh
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575 (main)
+$ cd "Class Sessions"
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ ls
+'Bash intro-Session 2'/
+'Session 3_Bash_commands_applied'/
+ Session_4_Git_GitHub/
+ Session_5_Programming_concepts_python/
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions (main)
+$ cd Session_4_Git_GitHub/
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_4_Git_GitHub (main)
+$ ls
+BRCA1_sequence.fa   bash_git_commands.sh  test_repo/
+BRCA2_sequence.fa   example_script.sh*    testing/
+Git_and_GitHub.pdf  results.txt
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_4_Git_GitHub (main)
+$ cd testing/
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_4_Git_GitHub/testing (main)
+$ ls
+LICENSE  README.md  new_file.txt
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_4_Git_GitHub/testing (main)
+-------
+c. $ pwd
+/c/Users/alauth/Documents/bioinf575/Class Sessions/Session_4_Git_GitHub/testing
+-------
+d. $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+e. $ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 752 bytes | 39.00 KiB/s, done.
+From https://github.com/alauth22/testing
+   1f6bed1..7324129  main       -> origin/main
+Updating 1f6bed1..7324129
+Fast-forward
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+f. $ cat README.md
+GitHub Repo to better understand GitHub repos
+testing_GitHub_BIOINF_575
+Added a line
+
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+
+g. $ echo "This line is the Problem1Bg." >> README.md
+
+h. $ git diff
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+diff --git a/README.md b/README.md
+index 1deaa64..0925c12 100644
+--- a/README.md
++++ b/README.md
+@@ -4,3 +4,4 @@ Added a line
+
+ Repo for testing
+ We will work with this repo for the BIOINF 575 class
++This line is the Problem1Bg.
+
+i. $ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+alauth@LTMSS249 MINGW64 ~/Documents/bioinf575/Class Sessions/Session_4_Git_GitHub/testing (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+j. $ git commit -m "Added a line in README.md for Problem1Bj"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+k. $ echo "This line is added by mistake for Problem1bk" >> README.md
+
+l. $ cat README.md
+GitHub Repo to better understand GitHub repos
+testing_GitHub_BIOINF_575
+Added a line
+
+Repo for testing
+We will work with this repo for the BIOINF 575 class
+This line is the Problem1Bg.
+This line is added by mistake for Problem1bk
+
+m. $ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+n. $ git commit -m "Added a line by mistake in README.md for Problem1Bn"
+[main 790d72e] Added a line by mistake in README.md for Problem1Bn
+ 1 file changed, 1 insertion(+)
+
+o. $ git log --oneline
+**790d72e (HEAD -> main) Added a line by mistake in README.md for Problem1Bn
+406381f Added a line by mistake in README.md for Problem1Bj
+7324129 (origin/main, origin/HEAD) Update README.md
+1f6bed1 (new_feature) Added new_file.txt
+3f1936b Update README.md
+14465a0 Merge pull request #1 from alauth22/changed_title
+d3b4db8 Update README.md
+d08df04 Update README.md
+de3bb7f Initial commit
+
+p. $ git checkout 406381f README.md
+Updated 1 path from 9d87bd5
+
+q. $ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+unchanged and staged 
+"modified:  README.md file is the file that was changed and is highlighted in green."
+
+r. $ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+$ git commit -m "For step letter r in HW1"
+[main e53cdef] For step letter r in HW1
+ 1 file changed, 1 deletion(-)
+$ git push
+
+
+
+
+
+
+
+
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 743 bytes | 743.00 KiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 2 local objects.
+To https://github.com/alauth22/testing.git
+   7324129..e53cdef  main -> main
+
+
+
+
+
+
+
+
+
+s. 
+
+
+
+
+
+
+
+
+
+Problem 2. 
+
+
+
+
+
+
